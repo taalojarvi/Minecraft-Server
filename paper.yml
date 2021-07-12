@@ -58,6 +58,17 @@ settings:
     enabled: false
     online-mode: false
     secret: ''
+  console:
+    enable-brigadier-highlighting: true
+    enable-brigadier-completions: true
+  item-validation:
+    display-name: 8192
+    loc-name: 8192
+    lore-line: 8192
+    book:
+      title: 8192
+      author: 8192
+      page: 16384
 timings:
   enabled: true
   verbose: true
@@ -79,6 +90,9 @@ messages:
     connection-throttle: Connection throttled! Please wait before reconnecting.
 world-settings:
   default:
+    seed-based-feature-search-loads-chunks: false
+    map-item-frame-cursor-limit: 128
+    fix-items-merging-through-walls: false
     allow-using-signs-inside-spawn-protection: false
     water-over-lava-flow-speed: 5
     grass-spread-tick-rate: 1
@@ -247,3 +261,11 @@ world-settings:
       spawn-chance-failure-increment: 25
       spawn-chance-min: 25
       spawn-chance-max: 75
+    spawn-limits:
+      monsters: -1
+      animals: -1
+      water-animals: -1
+      water-ambient: -1
+      ambient: -1
+    unsupported-settings:
+      fix-invulnerable-end-crystal-exploit: true
