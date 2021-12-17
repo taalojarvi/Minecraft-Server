@@ -24,14 +24,16 @@ settings:
   shutdown-message: Server has shut down successfully
   minimum-api: none
 spawn-limits:
-  monsters: 70
-  animals: 10
-  water-animals: 15
-  water-ambient: 20
-  ambient: 15
+  water-underground-creature: 5
+  monsters: 50
+  animals: 8
+  water-animals: 7
+  water-ambient: 10
+  ambient: 1
 chunk-gc:
-  period-in-ticks: 600
+  period-in-ticks: 400
 ticks-per:
+  water-underground-creature-spawns: 1
   animal-spawns: 400
   monster-spawns: 1
   water-spawns: 1
