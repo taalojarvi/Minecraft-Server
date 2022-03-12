@@ -1,10 +1,10 @@
 # This is the main configuration file for Paper.
 # As you can see, there's tons to configure. Some options may impact gameplay, so use
 # with caution, and make sure you know what each option does before configuring.
-# 
+#
 # If you need help with the configuration or have any questions related to Paper,
 # join us in our Discord or IRC channel.
-# 
+#
 # Discord: https://discord.gg/papermc
 # IRC: #paper @ irc.esper.net ( https://webchat.esper.net/?channels=paper ) 
 # Website: https://papermc.io/ 
@@ -12,8 +12,10 @@
 
 verbose: false
 use-display-name-in-quit-message: false
-config-version: 24
+config-version: 25
 settings:
+  time-command-affects-all-worlds: false
+  fix-target-selector-tag-completion: true
   log-player-ip-addresses: true
   lag-compensate-block-breaking: true
   send-full-pos-for-hard-colliding-entities: true
@@ -33,6 +35,7 @@ settings:
   bungee-online-mode: true
   load-permissions-yml-before-plugins: true
   unsupported-settings:
+    perform-username-validation: true
     allow-piston-duplication: false
     allow-permanent-block-break-exploits: false
     allow-headless-pistons: false
@@ -83,7 +86,7 @@ settings:
     global-max-chunk-send-rate: -1.0
     enable-frustum-priority: false
     global-max-chunk-load-rate: -1.0
-    player-max-concurrent-loads: 4.0
+    player-max-concurrent-loads: 20.0
     global-max-concurrent-loads: 500.0
   packet-limiter:
     kick-message: '&cSent too many packets'
@@ -119,6 +122,16 @@ messages:
     connection-throttle: Connection throttled! Please wait before reconnecting.
 world-settings:
   default:
+    wateranimal-spawn-height:
+      maximum: default
+      minimum: default
+    slime-spawn-height:
+      swamp-biome:
+        maximum: 70.0
+        minimum: 50.0
+      slime-chunk:
+        maximum: 40.0
+    monster-spawn-max-light-level: -1
     piglins-guard-chests: true
     map-item-frame-cursor-update-interval: 10
     show-sign-click-command-failure-msgs-to-player: false
